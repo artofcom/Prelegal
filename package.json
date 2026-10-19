@@ -1,0 +1,14 @@
+{
+  "name": "prelegal",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Prelegal web application and legal document template dataset.",
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "validate:templates": "node scripts/validate-templates.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

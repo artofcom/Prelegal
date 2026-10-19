@@ -1,0 +1,1871 @@
+{
+  "$schema": "./video-game-templates.schema.json",
+  "datasetId": "video-game-legal-templates",
+  "name": "Prelegal Video Game Legal Template Dataset",
+  "version": "1.0.0",
+  "lastUpdated": "2026-10-19",
+  "locale": "en-US",
+  "description": "A curated dataset of legal document templates for video game developers, publishers, and community-facing game services. Each template exposes variables that a document generation system can replace with user-specific information.",
+  "disclaimer": "These templates are provided for informational purposes only and do not constitute legal advice. They are general starting points that must be reviewed and adapted by a qualified attorney licensed in the relevant jurisdiction before use. Placeholders written as double curly braces must be replaced with user-specific information.",
+  "templates": [
+    {
+      "id": "eula",
+      "slug": "end-user-license-agreement",
+      "title": "End User License Agreement",
+      "category": "Licensing",
+      "summary": "Governs the installation and use of a video game by end users.",
+      "description": "A baseline EULA for PC, console, or mobile games. It covers the license grant, restrictions, ownership, virtual items, user-generated content, termination, and disputes. Platform requirements and local consumer laws should be reviewed before publication.",
+      "jurisdiction": "United States (general; adapt to local consumer law and platform rules)",
+      "tags": ["eula", "license", "game-client", "consumer"],
+      "version": "1.0.0",
+      "variables": [
+        {
+          "key": "company_name",
+          "label": "Company legal name",
+          "type": "string",
+          "required": true,
+          "example": "Pixel Forge Games LLC",
+          "description": "The legal entity that publishes the game and grants the license."
+        },
+        {
+          "key": "product_name",
+          "label": "Game title",
+          "type": "string",
+          "required": true,
+          "example": "Starfall Tactics",
+          "description": "The commercial name of the game covered by the agreement."
+        },
+        {
+          "key": "website_url",
+          "label": "Company website",
+          "type": "url",
+          "required": true,
+          "example": "https://pixelforge.example",
+          "description": "Website where users can review the current agreement and policies."
+        },
+        {
+          "key": "contact_email",
+          "label": "Support email",
+          "type": "email",
+          "required": true,
+          "example": "support@pixelforge.example",
+          "description": "Email address for legal and support notices."
+        },
+        {
+          "key": "effective_date",
+          "label": "Effective date",
+          "type": "date",
+          "required": true,
+          "example": "2026-01-01",
+          "description": "Date on which the agreement takes effect."
+        },
+        {
+          "key": "age_requirement",
+          "label": "Minimum age",
+          "type": "number",
+          "required": true,
+          "example": "13",
+          "description": "Minimum age for accepting the agreement without a parent or guardian."
+        },
+        {
+          "key": "governing_law",
+          "label": "Governing law",
+          "type": "string",
+          "required": true,
+          "example": "the State of Delaware",
+          "description": "Jurisdiction whose laws govern the agreement."
+        },
+        {
+          "key": "venue",
+          "label": "Venue",
+          "type": "string",
+          "required": true,
+          "example": "the state and federal courts located in New Castle County, Delaware",
+          "description": "Courts with exclusive jurisdiction over disputes."
+        },
+        {
+          "key": "arbitration_opt_out_days",
+          "label": "Arbitration opt-out window (days)",
+          "type": "number",
+          "required": true,
+          "example": "30",
+          "description": "Number of days after acceptance within which a user may opt out of arbitration."
+        },
+        {
+          "key": "refund_policy_url",
+          "label": "Refund policy URL",
+          "type": "url",
+          "required": true,
+          "example": "https://pixelforge.example/refunds",
+          "description": "URL for the refund policy referenced by the purchase section."
+        }
+      ],
+      "sections": [
+        {
+          "id": "acceptance",
+          "heading": "Acceptance of This Agreement",
+          "body": "This End User License Agreement, effective {{effective_date}}, is a legal agreement between you and {{company_name}} for the game {{product_name}} and any related updates, content, or services made available by {{company_name}}. By installing, copying, accessing, or using {{product_name}}, you agree to this Agreement. If you do not agree, do not install or use the game. You must be at least {{age_requirement}} years old to accept this Agreement on your own behalf; otherwise, a parent or legal guardian must accept it for you. The current version of this Agreement is available at {{website_url}}."
+        },
+        {
+          "id": "license-grant",
+          "heading": "License Grant",
+          "body": "Subject to your compliance with this Agreement, {{company_name}} grants you a limited, personal, non-exclusive, non-transferable, non-sublicensable, and revocable license to install and use {{product_name}} for your own non-commercial entertainment purposes on devices that you own or control. This license is for the game as distributed by {{company_name}} and does not transfer any ownership rights to you."
+        },
+        {
+          "id": "restrictions",
+          "heading": "Restrictions",
+          "body": "You may not sell, rent, lease, lend, sublicense, distribute, or otherwise transfer the game or your license. You may not reverse engineer, decompile, disassemble, modify, or create derivative works of the game except to the extent that applicable law expressly permits. You may not remove or alter proprietary notices, bypass technical protection measures, use cheats or automation tools that provide an unfair advantage, or use the game to violate any law or the rights of another person."
+        },
+        {
+          "id": "ownership",
+          "heading": "Ownership",
+          "body": "{{company_name}} and its licensors own all right, title, and interest in and to {{product_name}}, including all software, artwork, characters, music, sound, text, trademarks, and other content, together with all intellectual property rights in them. This Agreement grants only the limited license described above. All rights not expressly granted are reserved by {{company_name}} and its licensors."
+        },
+        {
+          "id": "updates-and-online-services",
+          "heading": "Updates and Online Services",
+          "body": "{{company_name}} may provide updates, patches, downloadable content, or online features for {{product_name}}. Some features may require an internet connection, an account, or a subscription. {{company_name}} may modify, suspend, or discontinue online services in its discretion, subject to applicable law. Updates may be required for continued use of the game, and this Agreement applies to all updates unless a separate agreement accompanies an update. Additional terms for online services may be posted at {{website_url}}."
+        },
+        {
+          "id": "virtual-items-and-purchases",
+          "heading": "Virtual Items and Purchases",
+          "body": "{{product_name}} may allow you to purchase or earn virtual currency, items, cosmetics, or other digital content. Virtual items are licensed to you, not sold, and have no cash value. They may not be redeemed for money, transferred outside the game, or exchanged for real-world goods or services except as required by applicable law. All purchases are subject to the refund policy at {{refund_policy_url}} and the rules of the platform through which you purchased the item. {{company_name}} may manage, modify, or remove virtual items as part of operating the game."
+        },
+        {
+          "id": "user-generated-content",
+          "heading": "User-Generated Content",
+          "body": "If {{product_name}} allows you to create or share content, you retain ownership of your content. You grant {{company_name}} a worldwide, royalty-free, non-exclusive license to use, reproduce, display, distribute, and create derivative works of your content as needed to operate, promote, and improve the game. You represent that you have all rights necessary to grant this license and that your content does not violate the rights of others. {{company_name}} may remove content that violates this Agreement or applicable law."
+        },
+        {
+          "id": "termination",
+          "heading": "Termination",
+          "body": "This Agreement remains in effect until terminated. Your rights under this Agreement terminate automatically if you materially breach it. {{company_name}} may also terminate this Agreement or suspend access to {{product_name}} if necessary to comply with law, protect other users, or discontinue the game. On termination, you must stop using the game and delete all copies in your possession or control. Sections that by their nature should survive termination, including ownership, disclaimers, limitation of liability, and dispute resolution, will survive."
+        },
+        {
+          "id": "disclaimers",
+          "heading": "Disclaimers",
+          "body": "To the maximum extent permitted by law, {{product_name}} is provided as is and as available, without warranties of any kind, whether express, implied, or statutory, including warranties of merchantability, fitness for a particular purpose, title, and non-infringement. {{company_name}} does not warrant that the game will be uninterrupted, error-free, secure, or free of harmful components. Some jurisdictions do not allow the exclusion of certain warranties, so some of the above exclusions may not apply to you."
+        },
+        {
+          "id": "limitation-of-liability",
+          "heading": "Limitation of Liability",
+          "body": "To the maximum extent permitted by law, {{company_name}} and its directors, officers, employees, agents, and licensors will not be liable for indirect, incidental, special, consequential, exemplary, or punitive damages, or for loss of profits, data, goodwill, or business opportunity, arising out of or relating to this Agreement or the game, even if advised of the possibility of such damages. The total liability of {{company_name}} arising out of or relating to this Agreement will not exceed the amount you paid to {{company_name}} for the game in the twelve months before the event giving rise to the claim, or the minimum amount required by applicable law. Nothing in this Agreement limits liability that cannot be limited by law."
+        },
+        {
+          "id": "dispute-resolution",
+          "heading": "Dispute Resolution",
+          "body": "This Agreement is governed by the laws of {{governing_law}}, without regard to conflict of law rules. Except where applicable law provides otherwise, disputes will be resolved exclusively in {{venue}}. To the extent permitted by law, you and {{company_name}} agree to resolve covered disputes through final and binding arbitration on an individual basis, and each party waives the right to participate in a class action or representative proceeding. You may opt out of arbitration by sending written notice to {{contact_email}} within {{arbitration_opt_out_days}} days after accepting this Agreement. Claims that may be brought in small claims court or that cannot be arbitrated under applicable law are excluded from this arbitration provision."
+        },
+        {
+          "id": "changes",
+          "heading": "Changes to This Agreement",
+          "body": "{{company_name}} may update this Agreement from time to time. If a change is material, {{company_name}} will provide notice through the game, by email, or on {{website_url}} before the change takes effect, unless a shorter period is required by law or necessary for security reasons. Your continued use of {{product_name}} after the updated Agreement takes effect means that you accept the updated terms."
+        },
+        {
+          "id": "contact",
+          "heading": "Contact",
+          "body": "Questions about this Agreement may be sent to {{company_name}} at {{contact_email}} or through {{website_url}}."
+        }
+      ]
+    },
+    {
+      "id": "terms-of-service",
+      "slug": "terms-of-service",
+      "title": "Terms of Service",
+      "category": "Terms of Service",
+      "summary": "Sets the rules for accounts and online game services.",
+      "description": "A terms of service template for live-service, multiplayer, or account-based games. It addresses accounts, subscriptions, user content, prohibited conduct, virtual goods, termination, and dispute resolution.",
+      "jurisdiction": "United States (general; adapt to local consumer law and platform rules)",
+      "tags": ["terms", "accounts", "online-services", "subscriptions"],
+      "version": "1.0.0",
+      "variables": [
+        {
+          "key": "company_name",
+          "label": "Company legal name",
+          "type": "string",
+          "required": true,
+          "example": "Pixel Forge Games LLC",
+          "description": "The legal entity operating the game services."
+        },
+        {
+          "key": "product_name",
+          "label": "Game or service name",
+          "type": "string",
+          "required": true,
+          "example": "Starfall Tactics Online",
+          "description": "The game or online service covered by the terms."
+        },
+        {
+          "key": "website_url",
+          "label": "Company website",
+          "type": "url",
+          "required": true,
+          "example": "https://pixelforge.example",
+          "description": "Website where the current terms and policies are posted."
+        },
+        {
+          "key": "contact_email",
+          "label": "Support email",
+          "type": "email",
+          "required": true,
+          "example": "support@pixelforge.example",
+          "description": "Email address for support and legal notices."
+        },
+        {
+          "key": "effective_date",
+          "label": "Effective date",
+          "type": "date",
+          "required": true,
+          "example": "2026-01-01",
+          "description": "Date on which the terms take effect."
+        },
+        {
+          "key": "age_requirement",
+          "label": "Minimum age",
+          "type": "number",
+          "required": true,
+          "example": "13",
+          "description": "Minimum age for creating an account without a parent or guardian."
+        },
+        {
+          "key": "governing_law",
+          "label": "Governing law",
+          "type": "string",
+          "required": true,
+          "example": "the State of Delaware",
+          "description": "Jurisdiction whose laws govern the terms."
+        },
+        {
+          "key": "venue",
+          "label": "Venue",
+          "type": "string",
+          "required": true,
+          "example": "the state and federal courts located in New Castle County, Delaware",
+          "description": "Courts with exclusive jurisdiction over disputes."
+        },
+        {
+          "key": "arbitration_opt_out_days",
+          "label": "Arbitration opt-out window (days)",
+          "type": "number",
+          "required": true,
+          "example": "30",
+          "description": "Number of days after acceptance within which a user may opt out of arbitration."
+        },
+        {
+          "key": "account_termination_days",
+          "label": "Account deletion grace period (days)",
+          "type": "number",
+          "required": true,
+          "example": "30",
+          "description": "Number of days a user has to recover an account after requesting deletion."
+        },
+        {
+          "key": "subscription_renewal_notice_days",
+          "label": "Subscription renewal notice (days)",
+          "type": "number",
+          "required": true,
+          "example": "7",
+          "description": "Advance notice period for subscription renewals where required."
+        },
+        {
+          "key": "user_content_license_scope",
+          "label": "User content license scope",
+          "type": "string",
+          "required": true,
+          "example": "operate, display, distribute, promote, and improve the game services",
+          "description": "Description of the purposes for which the company may use user content."
+        }
+      ],
+      "sections": [
+        {
+          "id": "acceptance",
+          "heading": "Acceptance of These Terms",
+          "body": "These Terms of Service, effective {{effective_date}}, govern your access to and use of {{product_name}} and related websites, features, and services provided by {{company_name}}. By creating an account, accessing, or using the services, you agree to these terms. If you do not agree, do not use the services. You must be at least {{age_requirement}} years old to create an account on your own behalf; otherwise, a parent or legal guardian must accept these terms for you. The current terms are available at {{website_url}}."
+        },
+        {
+          "id": "accounts",
+          "heading": "Accounts",
+          "body": "You may need an account to access some features of {{product_name}}. You agree to provide accurate information, keep your credentials secure, and notify {{company_name}} promptly of any unauthorized use. You are responsible for activity that occurs through your account. Accounts are personal and may not be sold, shared, or transferred without {{company_name}} permission. If you request deletion of your account, {{company_name}} may retain a recoverable copy for {{account_termination_days}} days before completing deletion, subject to legal retention requirements."
+        },
+        {
+          "id": "subscriptions",
+          "heading": "Subscriptions and Billing",
+          "body": "Some features of {{product_name}} may require a paid subscription. By purchasing a subscription, you authorize {{company_name}} and its payment processors to charge the applicable fees and taxes on a recurring basis until you cancel. Subscription terms, billing periods, and cancellation methods will be shown at purchase. Where required by law, {{company_name}} will send a renewal reminder at least {{subscription_renewal_notice_days}} days before a renewal. Except where required by law or expressly stated at purchase, fees are non-refundable."
+        },
+        {
+          "id": "user-content",
+          "heading": "User Content",
+          "body": "You may be able to submit content such as messages, screenshots, videos, mods, or other materials through {{product_name}}. You retain ownership of your content. You grant {{company_name}} a worldwide, royalty-free, non-exclusive license to use, reproduce, modify, display, distribute, and create derivative works of your content to {{user_content_license_scope}}. You represent that you have the rights needed to grant this license and that your content complies with these terms and applicable law. {{company_name}} may remove content that violates these terms."
+        },
+        {
+          "id": "prohibited-conduct",
+          "heading": "Prohibited Conduct",
+          "body": "You may not use {{product_name}} to violate any law, infringe intellectual property or privacy rights, harass or threaten others, distribute malware, interfere with the services, bypass security or access controls, or gain an unfair advantage through cheats, bots, or unauthorized third-party tools. You may not use the services to send spam, scrape data in violation of posted restrictions, or impersonate another person. {{company_name}} may investigate suspected violations and take appropriate action, including removing content or suspending access."
+        },
+        {
+          "id": "virtual-goods",
+          "heading": "Virtual Goods",
+          "body": "{{product_name}} may offer virtual currency, items, or other digital goods. Virtual goods are licensed, not sold, and have no cash value. They may not be transferred or redeemed outside the services except as required by law. Purchases are subject to the platform rules and refund policy presented at purchase. {{company_name}} may modify or remove virtual goods as part of operating and updating the services, subject to applicable law."
+        },
+        {
+          "id": "third-party-services",
+          "heading": "Third-Party Services",
+          "body": "{{product_name}} may link to or integrate third-party services, platforms, or content. {{company_name}} does not control and is not responsible for third-party services. Your use of a third-party service is governed by that provider's terms and privacy policy. You should review those terms before using the service."
+        },
+        {
+          "id": "termination",
+          "heading": "Suspension and Termination",
+          "body": "{{company_name}} may suspend or terminate your access to {{product_name}} if you violate these terms, if necessary to protect the services or other users, or if required by law. You may stop using the services at any time and may request account deletion as described above. On termination, your right to use the services ends, and {{company_name}} may delete associated data in accordance with its privacy policy and legal obligations. Provisions that by their nature should survive termination will survive."
+        },
+        {
+          "id": "disclaimers",
+          "heading": "Disclaimers",
+          "body": "To the maximum extent permitted by law, {{product_name}} is provided as is and as available, without warranties of any kind, whether express, implied, or statutory, including warranties of merchantability, fitness for a particular purpose, and non-infringement. {{company_name}} does not guarantee that the services will be uninterrupted, secure, or error-free. Some jurisdictions do not allow certain warranty exclusions, so parts of this section may not apply to you."
+        },
+        {
+          "id": "limitation-of-liability",
+          "heading": "Limitation of Liability",
+          "body": "To the maximum extent permitted by law, {{company_name}} and its directors, officers, employees, agents, and licensors will not be liable for indirect, incidental, special, consequential, exemplary, or punitive damages, or for loss of profits, data, goodwill, or business opportunity, arising out of or relating to the services or these terms. The total liability of {{company_name}} arising out of or relating to the services will not exceed the amount you paid to {{company_name}} for the services in the twelve months before the event giving rise to the claim, or the minimum amount required by applicable law. Nothing in these terms limits liability that cannot be limited by law."
+        },
+        {
+          "id": "dispute-resolution",
+          "heading": "Dispute Resolution",
+          "body": "These terms are governed by the laws of {{governing_law}}, without regard to conflict of law rules. Except where applicable law provides otherwise, disputes will be resolved exclusively in {{venue}}. To the extent permitted by law, you and {{company_name}} agree to resolve covered disputes through final and binding arbitration on an individual basis and waive participation in a class action or representative proceeding. You may opt out of arbitration by sending written notice to {{contact_email}} within {{arbitration_opt_out_days}} days after accepting these terms. Claims that cannot be arbitrated under applicable law are excluded."
+        },
+        {
+          "id": "changes",
+          "heading": "Changes to These Terms",
+          "body": "{{company_name}} may update these terms from time to time. If a change is material, {{company_name}} will provide notice through the services, by email, or on {{website_url}} before the change takes effect, unless a shorter period is required by law or necessary for security reasons. Your continued use of {{product_name}} after the updated terms take effect means that you accept the updated terms."
+        },
+        {
+          "id": "contact",
+          "heading": "Contact",
+          "body": "Questions about these terms may be sent to {{company_name}} at {{contact_email}} or through {{website_url}}."
+        }
+      ]
+    },
+    {
+      "id": "privacy-policy",
+      "slug": "privacy-policy",
+      "title": "Privacy Policy",
+      "category": "Privacy",
+      "summary": "Explains how a game collects, uses, and shares player data.",
+      "description": "A privacy policy template for a game, website, and related online services. It covers data categories, purposes, cookies, sharing, retention, security, children, user rights, and international transfers. Adapt the legal bases and rights sections to the jurisdictions where players live.",
+      "jurisdiction": "United States and European Union (general; adapt to applicable privacy laws)",
+      "tags": ["privacy", "gdpr", "ccpa", "analytics", "player-data"],
+      "version": "1.0.0",
+      "variables": [
+        {
+          "key": "company_name",
+          "label": "Company legal name",
+          "type": "string",
+          "required": true,
+          "example": "Pixel Forge Games LLC",
+          "description": "The legal entity responsible for the data processing described in the policy."
+        },
+        {
+          "key": "product_name",
+          "label": "Game or service name",
+          "type": "string",
+          "required": true,
+          "example": "Starfall Tactics",
+          "description": "The game or service covered by the policy."
+        },
+        {
+          "key": "website_url",
+          "label": "Company website",
+          "type": "url",
+          "required": true,
+          "example": "https://pixelforge.example",
+          "description": "Website where the current policy is posted."
+        },
+        {
+          "key": "contact_email",
+          "label": "General contact email",
+          "type": "email",
+          "required": true,
+          "example": "support@pixelforge.example",
+          "description": "Email address for general questions."
+        },
+        {
+          "key": "privacy_email",
+          "label": "Privacy contact email",
+          "type": "email",
+          "required": true,
+          "example": "privacy@pixelforge.example",
+          "description": "Email address for privacy requests and questions."
+        },
+        {
+          "key": "effective_date",
+          "label": "Effective date",
+          "type": "date",
+          "required": true,
+          "example": "2026-01-01",
+          "description": "Date on which the policy takes effect."
+        },
+        {
+          "key": "data_retention_period",
+          "label": "Data retention period",
+          "type": "string",
+          "required": true,
+          "example": "24 months after the last account activity",
+          "description": "Default retention period for personal data."
+        },
+        {
+          "key": "children_minimum_age",
+          "label": "Minimum age for children's data",
+          "type": "number",
+          "required": true,
+          "example": "13",
+          "description": "Age below which parental consent is required where applicable."
+        },
+        {
+          "key": "third_party_categories",
+          "label": "Third-party categories",
+          "type": "string",
+          "required": true,
+          "example": "payment processors, cloud hosting providers, analytics providers, customer support tools, and anti-cheat providers",
+          "description": "Categories of service providers that may receive personal data."
+        },
+        {
+          "key": "dpo_contact",
+          "label": "Data protection officer contact",
+          "type": "string",
+          "required": false,
+          "example": "Data Protection Officer, Pixel Forge Games LLC, privacy@pixelforge.example",
+          "description": "Contact details for a data protection officer or representative, if one is required."
+        },
+        {
+          "key": "international_transfer_safeguards",
+          "label": "International transfer safeguards",
+          "type": "string",
+          "required": true,
+          "example": "standard contractual clauses and additional technical and organizational measures",
+          "description": "Safeguards used when transferring personal data across borders."
+        }
+      ],
+      "sections": [
+        {
+          "id": "scope",
+          "heading": "Scope",
+          "body": "This Privacy Policy, effective {{effective_date}}, explains how {{company_name}} collects, uses, shares, and protects personal information in connection with {{product_name}}, {{website_url}}, and related services. It applies to information collected through the game, website, customer support, and events. It does not apply to third-party services that have their own privacy policies."
+        },
+        {
+          "id": "information-we-collect",
+          "heading": "Information We Collect",
+          "body": "We collect information you provide directly, such as account details, profile information, purchase information, support messages, and content you submit. We also collect information automatically when you use {{product_name}}, such as device identifiers, IP address, game progress, gameplay events, crash reports, approximate location derived from IP address, and usage data. We may receive information from platforms, payment processors, and marketing partners where you have authorized those disclosures."
+        },
+        {
+          "id": "how-we-use",
+          "heading": "How We Use Information",
+          "body": "We use personal information to provide and operate {{product_name}}, create and manage accounts, process purchases, deliver customer support, maintain security and prevent fraud, detect cheating, personalize and improve the game, analyze usage, communicate with you, comply with legal obligations, and enforce our terms. We may also use information to send marketing communications where permitted by law, and you can opt out at any time."
+        },
+        {
+          "id": "legal-bases",
+          "heading": "Legal Bases for Processing",
+          "body": "Where required by law, we process personal information on the following legal bases: performance of a contract with you, our legitimate interests in operating and improving the game, your consent, and compliance with legal obligations. You may withdraw consent at any time where processing is based on consent, without affecting the lawfulness of processing before withdrawal."
+        },
+        {
+          "id": "cookies",
+          "heading": "Cookies and Similar Technologies",
+          "body": "We and our service providers use cookies, local storage, SDKs, and similar technologies to operate {{product_name}}, remember preferences, measure performance, analyze usage, and support marketing. Where required by law, we will request consent before using non-essential cookies. You can manage cookies through your browser settings and any consent tools we provide, although disabling some cookies may affect the game or website."
+        },
+        {
+          "id": "sharing",
+          "heading": "How We Share Information",
+          "body": "We may share personal information with {{third_party_categories}}. We may also share information with platform providers when you play through their services, with professional advisers, with authorities when required by law, and with a successor in connection with a merger, acquisition, or sale of assets. We do not sell personal information for money. Where applicable law defines sale or sharing broadly, we will provide the notices and opt-out rights required by that law."
+        },
+        {
+          "id": "retention",
+          "heading": "Data Retention",
+          "body": "We retain personal information for as long as needed to provide the services, comply with legal obligations, resolve disputes, and enforce agreements. Unless a longer period is required or permitted by law, we generally retain account and gameplay data for {{data_retention_period}}. When information is no longer needed, we delete it or de-identify it."
+        },
+        {
+          "id": "security",
+          "heading": "Security",
+          "body": "We use administrative, technical, and organizational measures designed to protect personal information against unauthorized access, loss, misuse, and alteration. These measures include access controls, encryption where appropriate, monitoring, and vendor oversight. No method of transmission or storage is completely secure, so we cannot guarantee absolute security."
+        },
+        {
+          "id": "children",
+          "heading": "Children's Privacy",
+          "body": "{{product_name}} is not directed to children under {{children_minimum_age}}, and we do not knowingly collect personal information from children under that age without appropriate consent. If you believe a child has provided personal information without the required consent, contact us at {{privacy_email}} so we can take appropriate action. Some features may have additional age restrictions."
+        },
+        {
+          "id": "rights",
+          "heading": "Your Privacy Rights",
+          "body": "Depending on where you live, you may have the right to access, correct, delete, restrict, or object to the processing of your personal information, to data portability, to withdraw consent, and to lodge a complaint with a supervisory authority. To exercise these rights, contact us at {{privacy_email}}. We may need to verify your identity before responding. Where applicable, you may designate an authorized agent to submit a request on your behalf."
+        },
+        {
+          "id": "international-transfers",
+          "heading": "International Transfers",
+          "body": "{{company_name}} may process personal information in countries other than the country where you live. Where we transfer personal information internationally, we use safeguards such as {{international_transfer_safeguards}} and take steps designed to ensure that the information receives an adequate level of protection."
+        },
+        {
+          "id": "changes",
+          "heading": "Changes to This Policy",
+          "body": "We may update this Privacy Policy from time to time. If a change is material, we will provide notice through {{product_name}}, by email, or on {{website_url}} before the change takes effect, unless a shorter period is required by law. The effective date at the top of this policy shows when it was last updated."
+        },
+        {
+          "id": "contact",
+          "heading": "Contact Us",
+          "body": "For privacy questions or requests, contact {{company_name}} at {{privacy_email}}. For general questions, contact {{contact_email}}. If a data protection officer or representative has been appointed, their details are: {{dpo_contact}}."
+        }
+      ]
+    },
+    {
+      "id": "mutual-nda",
+      "slug": "mutual-non-disclosure-agreement",
+      "title": "Mutual Non-Disclosure Agreement",
+      "category": "Confidentiality",
+      "summary": "Protects confidential information exchanged between game business partners.",
+      "description": "A two-way NDA for publishers, developers, contractors, platform partners, and other parties evaluating or working on a game-related relationship. It covers definitions, exclusions, obligations, term, return of materials, and remedies.",
+      "jurisdiction": "United States (general; adapt to local law)",
+      "tags": ["nda", "confidentiality", "publishing", "business-development"],
+      "version": "1.0.0",
+      "variables": [
+        {
+          "key": "party_a_name",
+          "label": "Party A legal name",
+          "type": "string",
+          "required": true,
+          "example": "Pixel Forge Games LLC",
+          "description": "First party to the NDA."
+        },
+        {
+          "key": "party_a_address",
+          "label": "Party A address",
+          "type": "string",
+          "required": true,
+          "example": "123 Studio Way, Wilmington, DE 19801",
+          "description": "Notice address for Party A."
+        },
+        {
+          "key": "party_b_name",
+          "label": "Party B legal name",
+          "type": "string",
+          "required": true,
+          "example": "Northstar Interactive Inc.",
+          "description": "Second party to the NDA."
+        },
+        {
+          "key": "party_b_address",
+          "label": "Party B address",
+          "type": "string",
+          "required": true,
+          "example": "500 Market Street, San Francisco, CA 94105",
+          "description": "Notice address for Party B."
+        },
+        {
+          "key": "purpose",
+          "label": "Purpose",
+          "type": "string",
+          "required": true,
+          "example": "evaluating a potential publishing and co-development relationship for Starfall Tactics",
+          "description": "Business purpose for exchanging confidential information."
+        },
+        {
+          "key": "effective_date",
+          "label": "Effective date",
+          "type": "date",
+          "required": true,
+          "example": "2026-01-01",
+          "description": "Date on which the NDA takes effect."
+        },
+        {
+          "key": "confidentiality_period_years",
+          "label": "Confidentiality period (years)",
+          "type": "number",
+          "required": true,
+          "example": "3",
+          "description": "Number of years the confidentiality obligations last after disclosure."
+        },
+        {
+          "key": "governing_law",
+          "label": "Governing law",
+          "type": "string",
+          "required": true,
+          "example": "the State of Delaware",
+          "description": "Jurisdiction whose laws govern the NDA."
+        },
+        {
+          "key": "venue",
+          "label": "Venue",
+          "type": "string",
+          "required": true,
+          "example": "the state and federal courts located in New Castle County, Delaware",
+          "description": "Courts with exclusive jurisdiction over disputes."
+        },
+        {
+          "key": "return_days",
+          "label": "Return or destruction period (days)",
+          "type": "number",
+          "required": true,
+          "example": "30",
+          "description": "Number of days to return or destroy confidential materials after a written request."
+        }
+      ],
+      "sections": [
+        {
+          "id": "purpose",
+          "heading": "Purpose",
+          "body": "This Mutual Non-Disclosure Agreement, effective {{effective_date}}, is entered into by {{party_a_name}}, with an address at {{party_a_address}}, and {{party_b_name}}, with an address at {{party_b_address}}. The parties may disclose confidential information to each other solely for the purpose of {{purpose}}. Each party may act as both a disclosing party and a receiving party."
+        },
+        {
+          "id": "definition",
+          "heading": "Definition of Confidential Information",
+          "body": "Confidential Information means any non-public information disclosed by one party to the other, in any form, that is designated as confidential or that a reasonable person would understand to be confidential given the nature of the information and circumstances of disclosure. Confidential Information includes business plans, game designs, source code, builds, financial information, player data, marketing strategies, partner lists, and technical information."
+        },
+        {
+          "id": "exclusions",
+          "heading": "Exclusions",
+          "body": "Confidential Information does not include information that the receiving party can demonstrate: was publicly available at the time of disclosure or later became public without breach of this Agreement; was lawfully known to the receiving party before disclosure; was received from a third party without a duty of confidentiality; or was independently developed without use of or reference to the disclosing party's Confidential Information."
+        },
+        {
+          "id": "obligations",
+          "heading": "Obligations",
+          "body": "The receiving party will use Confidential Information only for the purpose described above, protect it with at least reasonable care, and limit access to employees, contractors, and professional advisers who need to know it and are bound by confidentiality obligations at least as protective as this Agreement. The receiving party will not disclose Confidential Information to any other person without the disclosing party's prior written consent."
+        },
+        {
+          "id": "term",
+          "heading": "Term",
+          "body": "This Agreement begins on the effective date and continues for one year, unless terminated earlier by either party on written notice. The confidentiality obligations for information disclosed during the term will continue for {{confidentiality_period_years}} years after the date of disclosure. Trade secrets will be protected for as long as they remain trade secrets under applicable law."
+        },
+        {
+          "id": "return-or-destruction",
+          "heading": "Return or Destruction",
+          "body": "On the disclosing party's written request or on termination of this Agreement, the receiving party will promptly return or destroy all Confidential Information in its possession or control within {{return_days}} days, except for copies retained in routine backup systems or as required by law. Retained copies remain subject to this Agreement."
+        },
+        {
+          "id": "no-license",
+          "heading": "No License or Obligation",
+          "body": "No license or ownership right in Confidential Information is granted by this Agreement. The disclosure of Confidential Information does not create an obligation to enter into any further agreement or to proceed with the purpose. Each party remains free to develop products and services that may be similar to those discussed, provided it does not use the other party's Confidential Information."
+        },
+        {
+          "id": "remedies",
+          "heading": "Remedies",
+          "body": "The parties acknowledge that a breach of this Agreement may cause irreparable harm for which monetary damages may be inadequate. The disclosing party may seek injunctive or other equitable relief in addition to any other remedies available at law or in equity. The prevailing party in an action to enforce this Agreement may recover reasonable attorneys' fees and costs to the extent permitted by law."
+        },
+        {
+          "id": "governing-law",
+          "heading": "Governing Law",
+          "body": "This Agreement is governed by the laws of {{governing_law}}, without regard to conflict of law rules. The parties agree to the exclusive jurisdiction of {{venue}} for disputes arising out of or relating to this Agreement."
+        },
+        {
+          "id": "entire-agreement",
+          "heading": "Entire Agreement",
+          "body": "This Agreement is the entire agreement between the parties regarding its subject matter and supersedes all prior or contemporaneous understandings on that subject. Any amendment must be in writing and signed by both parties. If any provision is found unenforceable, the remaining provisions will remain in effect."
+        }
+      ]
+    },
+    {
+      "id": "independent-contractor-agreement",
+      "slug": "independent-contractor-agreement",
+      "title": "Independent Contractor Agreement",
+      "category": "Contracting",
+      "summary": "Engages an individual or studio to provide game development services.",
+      "description": "A services agreement for contract artists, programmers, designers, writers, audio professionals, and other game development contributors. It covers scope, pay, expenses, independent contractor status, intellectual property, confidentiality, and termination.",
+      "jurisdiction": "United States (general; adapt to local employment and tax law)",
+      "tags": ["contractor", "services", "game-development", "work-for-hire"],
+      "version": "1.0.0",
+      "variables": [
+        {
+          "key": "company_name",
+          "label": "Company legal name",
+          "type": "string",
+          "required": true,
+          "example": "Pixel Forge Games LLC",
+          "description": "The entity engaging the contractor."
+        },
+        {
+          "key": "contractor_name",
+          "label": "Contractor legal name",
+          "type": "string",
+          "required": true,
+          "example": "Jordan Lee",
+          "description": "The individual or entity providing services."
+        },
+        {
+          "key": "contractor_address",
+          "label": "Contractor address",
+          "type": "string",
+          "required": true,
+          "example": "456 Artist Lane, Austin, TX 78701",
+          "description": "Notice address for the contractor."
+        },
+        {
+          "key": "project_description",
+          "label": "Project description",
+          "type": "string",
+          "required": true,
+          "example": "character concept art and 3D modeling for Starfall Tactics",
+          "description": "Short description of the project or engagement."
+        },
+        {
+          "key": "rate",
+          "label": "Rate",
+          "type": "string",
+          "required": true,
+          "example": "USD 75 per hour",
+          "description": "Contractor compensation rate."
+        },
+        {
+          "key": "payment_schedule",
+          "label": "Payment schedule",
+          "type": "string",
+          "required": true,
+          "example": "monthly on the fifteenth day of each month",
+          "description": "When and how often the contractor is paid."
+        },
+        {
+          "key": "invoice_due_days",
+          "label": "Invoice due period (days)",
+          "type": "number",
+          "required": true,
+          "example": "30",
+          "description": "Number of days after invoice receipt within which payment is due."
+        },
+        {
+          "key": "termination_notice_days",
+          "label": "Termination notice (days)",
+          "type": "number",
+          "required": true,
+          "example": "14",
+          "description": "Notice period required to terminate the agreement for convenience."
+        },
+        {
+          "key": "effective_date",
+          "label": "Effective date",
+          "type": "date",
+          "required": true,
+          "example": "2026-01-01",
+          "description": "Date on which the agreement takes effect."
+        },
+        {
+          "key": "governing_law",
+          "label": "Governing law",
+          "type": "string",
+          "required": true,
+          "example": "the State of Delaware",
+          "description": "Jurisdiction whose laws govern the agreement."
+        },
+        {
+          "key": "venue",
+          "label": "Venue",
+          "type": "string",
+          "required": true,
+          "example": "the state and federal courts located in New Castle County, Delaware",
+          "description": "Courts with exclusive jurisdiction over disputes."
+        },
+        {
+          "key": "ip_assignment",
+          "label": "Intellectual property assignment description",
+          "type": "string",
+          "required": true,
+          "example": "all deliverables, work product, and materials created under this Agreement",
+          "description": "Description of the intellectual property assigned to the company."
+        }
+      ],
+      "sections": [
+        {
+          "id": "engagement",
+          "heading": "Engagement",
+          "body": "{{company_name}} engages {{contractor_name}}, with an address at {{contractor_address}}, as an independent contractor to provide services for {{project_description}}. The contractor will perform the services with reasonable skill and care and will follow the reasonable directions of {{company_name}} regarding the project. This Agreement takes effect on {{effective_date}}."
+        },
+        {
+          "id": "services",
+          "heading": "Services",
+          "body": "The contractor will provide the services described in this Agreement or in one or more written statements of work. The contractor will keep {{company_name}} informed of progress and will promptly notify {{company_name}} of any issue that may affect the project timeline or budget. The contractor may use subcontractors only with {{company_name}} prior written approval, and the contractor remains responsible for the work of approved subcontractors."
+        },
+        {
+          "id": "compensation",
+          "heading": "Compensation",
+          "body": "{{company_name}} will pay the contractor {{rate}}. The contractor will submit invoices according to the following schedule: {{payment_schedule}}. {{company_name}} will pay undisputed invoices within {{invoice_due_days}} days after receipt, unless otherwise stated in a statement of work. The contractor is responsible for all taxes, withholdings, and filings arising from the compensation."
+        },
+        {
+          "id": "expenses",
+          "heading": "Expenses",
+          "body": "The contractor will be responsible for its own expenses unless {{company_name}} approves an expense in writing before it is incurred. Approved expenses will be reimbursed at cost and must be supported by reasonable documentation. Travel and equipment expenses require prior written approval."
+        },
+        {
+          "id": "independent-contractor",
+          "heading": "Independent Contractor Status",
+          "body": "The contractor is an independent contractor and not an employee, partner, agent, or joint venturer of {{company_name}}. The contractor controls the manner and means of performing the services, subject to the project requirements. The contractor is not entitled to employee benefits, workers' compensation, unemployment benefits, or other benefits provided to employees of {{company_name}}. Nothing in this Agreement authorizes the contractor to bind {{company_name}} or make commitments on its behalf."
+        },
+        {
+          "id": "intellectual-property",
+          "heading": "Intellectual Property",
+          "body": "The contractor assigns to {{company_name}} all right, title, and interest in and to {{ip_assignment}}, including all copyrights, trademarks, trade secrets, and other intellectual property rights, effective on creation. The contractor will execute any documents reasonably requested by {{company_name}} to confirm or perfect this assignment. To the extent any work product cannot be assigned, the contractor grants {{company_name}} a perpetual, worldwide, royalty-free, exclusive license to use it. The contractor retains no right to use the work product for any purpose without {{company_name}} written consent."
+        },
+        {
+          "id": "confidentiality",
+          "heading": "Confidentiality",
+          "body": "The contractor will keep confidential all non-public information received from {{company_name}}, including game designs, source code, builds, business plans, player data, and financial information. The contractor will use this information only to perform the services and will return or destroy it when the engagement ends or on request. These obligations do not apply to information that is publicly available through no fault of the contractor or that the contractor is required to disclose by law, provided the contractor gives {{company_name}} prompt notice where permitted."
+        },
+        {
+          "id": "term-and-termination",
+          "heading": "Term and Termination",
+          "body": "This Agreement begins on the effective date and continues until the services are completed or the Agreement is terminated. Either party may terminate for convenience with {{termination_notice_days}} days' written notice. Either party may terminate immediately for a material breach that is not cured within ten days after written notice. {{company_name}} may suspend work and terminate immediately if the contractor violates the confidentiality or intellectual property provisions. On termination, {{company_name}} will pay for services properly performed and approved before the effective date of termination."
+        },
+        {
+          "id": "representations",
+          "heading": "Representations and Warranties",
+          "body": "The contractor represents and warrants that it has the right and authority to enter into this Agreement, that the work product will be original or properly licensed, that the work product will not infringe the rights of any third party, and that the contractor will comply with applicable laws. The contractor will not incorporate third-party materials into the work product without {{company_name}} prior written approval and any required licenses."
+        },
+        {
+          "id": "governing-law",
+          "heading": "Governing Law",
+          "body": "This Agreement is governed by the laws of {{governing_law}}, without regard to conflict of law rules. The parties agree to the exclusive jurisdiction of {{venue}} for disputes arising out of or relating to this Agreement."
+        },
+        {
+          "id": "entire-agreement",
+          "heading": "Entire Agreement",
+          "body": "This Agreement and any incorporated statements of work are the entire agreement between the parties regarding its subject matter and supersede all prior or contemporaneous understandings. Any amendment must be in writing and signed by both parties. If any provision is found unenforceable, the remaining provisions will remain in effect."
+        }
+      ]
+    },
+    {
+      "id": "revenue-share-agreement",
+      "slug": "revenue-share-agreement",
+      "title": "Revenue Share Agreement",
+      "category": "Monetization",
+      "summary": "Defines how game revenue is shared between a developer and a publisher or partner.",
+      "description": "A revenue share template for publishing, co-development, or distribution relationships. It defines net revenue, the developer share, recoupment, reporting, payment, audit rights, intellectual property, and termination.",
+      "jurisdiction": "United States (general; adapt to local law and platform terms)",
+      "tags": ["revenue-share", "publishing", "royalties", "co-development"],
+      "version": "1.0.0",
+      "variables": [
+        {
+          "key": "developer_name",
+          "label": "Developer legal name",
+          "type": "string",
+          "required": true,
+          "example": "Pixel Forge Games LLC",
+          "description": "The party developing the game."
+        },
+        {
+          "key": "publisher_name",
+          "label": "Publisher legal name",
+          "type": "string",
+          "required": true,
+          "example": "Northstar Interactive Inc.",
+          "description": "The party publishing or financing the game."
+        },
+        {
+          "key": "product_name",
+          "label": "Game title",
+          "type": "string",
+          "required": true,
+          "example": "Starfall Tactics",
+          "description": "The game covered by the agreement."
+        },
+        {
+          "key": "developer_revenue_share_percentage",
+          "label": "Developer revenue share (%)",
+          "type": "number",
+          "required": true,
+          "example": "40",
+          "description": "Percentage of net revenue payable to the developer."
+        },
+        {
+          "key": "recoupment_amount",
+          "label": "Recoupment amount",
+          "type": "string",
+          "required": true,
+          "example": "USD 250,000",
+          "description": "Amount the publisher may recoup before sharing revenue."
+        },
+        {
+          "key": "reporting_frequency",
+          "label": "Reporting frequency",
+          "type": "string",
+          "required": true,
+          "example": "quarterly",
+          "description": "How often the publisher reports revenue and sales."
+        },
+        {
+          "key": "payment_days",
+          "label": "Payment period (days)",
+          "type": "number",
+          "required": true,
+          "example": "30",
+          "description": "Number of days after the end of a reporting period within which payment is due."
+        },
+        {
+          "key": "audit_period_years",
+          "label": "Audit period (years)",
+          "type": "number",
+          "required": true,
+          "example": "2",
+          "description": "How far back the developer may audit the publisher's records."
+        },
+        {
+          "key": "platform_definition",
+          "label": "Platform definition",
+          "type": "string",
+          "required": true,
+          "example": "Steam, Epic Games Store, PlayStation Store, Xbox Store, and Nintendo eShop",
+          "description": "Platforms whose sales are included in the revenue calculation."
+        },
+        {
+          "key": "effective_date",
+          "label": "Effective date",
+          "type": "date",
+          "required": true,
+          "example": "2026-01-01",
+          "description": "Date on which the agreement takes effect."
+        },
+        {
+          "key": "governing_law",
+          "label": "Governing law",
+          "type": "string",
+          "required": true,
+          "example": "the State of Delaware",
+          "description": "Jurisdiction whose laws govern the agreement."
+        },
+        {
+          "key": "venue",
+          "label": "Venue",
+          "type": "string",
+          "required": true,
+          "example": "the state and federal courts located in New Castle County, Delaware",
+          "description": "Courts with exclusive jurisdiction over disputes."
+        }
+      ],
+      "sections": [
+        {
+          "id": "engagement",
+          "heading": "Engagement",
+          "body": "This Revenue Share Agreement, effective {{effective_date}}, is entered into by {{developer_name}} and {{publisher_name}} for the development, publishing, and commercialization of {{product_name}}. The developer will develop and deliver the game, and the publisher will fund, publish, market, and distribute the game on the platforms described below. The parties will cooperate in good faith on the launch and ongoing operation of the game."
+        },
+        {
+          "id": "revenue-definition",
+          "heading": "Definition of Net Revenue",
+          "body": "Net Revenue means the gross amounts actually received by the publisher from sales and monetization of {{product_name}} on {{platform_definition}}, less platform fees, payment processing fees, refunds, chargebacks, taxes, and other pass-through costs specifically identified in this Agreement. Net Revenue does not include amounts from sources not expressly covered by this Agreement unless the parties agree in writing. The publisher will maintain records sufficient to calculate Net Revenue."
+        },
+        {
+          "id": "revenue-share",
+          "heading": "Revenue Share",
+          "body": "Subject to recoupment as described below, the publisher will pay the developer {{developer_revenue_share_percentage}} percent of Net Revenue. The publisher retains the remainder. The revenue share applies during the term and for so long as the publisher continues to commercialize {{product_name}}, unless the parties agree otherwise in writing."
+        },
+        {
+          "id": "recoupment",
+          "heading": "Recoupment",
+          "body": "The publisher may recoup {{recoupment_amount}} from Net Revenue before paying the developer revenue share. Recoupment applies only to the amount stated and to costs expressly identified in this Agreement. Once recoupment is complete, the developer share will be paid on all subsequent Net Revenue. The publisher will provide a recoupment statement with each report until recoupment is complete."
+        },
+        {
+          "id": "reporting-and-payment",
+          "heading": "Reporting and Payment",
+          "body": "The publisher will provide {{reporting_frequency}} reports showing gross sales, deductions, Net Revenue, recoupment, and amounts payable to the developer. The publisher will pay undisputed amounts within {{payment_days}} days after the end of each reporting period. Payments will be made in U.S. dollars by a mutually agreed method. The developer may request reasonable supporting detail for any report."
+        },
+        {
+          "id": "audit",
+          "heading": "Audit Rights",
+          "body": "The developer may audit the publisher's books and records relating to {{product_name}} once per year on reasonable notice, during normal business hours, and at the developer's expense. The audit may cover the {{audit_period_years}} years before the request. If an audit reveals an underpayment of more than five percent for the period audited, the publisher will reimburse the reasonable cost of the audit and pay the underpayment promptly."
+        },
+        {
+          "id": "intellectual-property",
+          "heading": "Intellectual Property",
+          "body": "The developer retains ownership of the game, its source code, artwork, characters, and other original content, subject to any rights granted to the publisher in this Agreement. The publisher receives a license to publish, market, distribute, and commercialize {{product_name}} during the term and in the territories covered by this Agreement. Each party retains ownership of its pre-existing intellectual property and grants only the rights expressly stated in this Agreement."
+        },
+        {
+          "id": "marketing",
+          "heading": "Marketing and Promotion",
+          "body": "The publisher will use commercially reasonable efforts to market and promote {{product_name}}, including store page management, promotional assets, and launch activities. The developer will provide reasonable marketing materials and approvals within agreed timelines. The publisher will not make material claims about the game that are misleading or inconsistent with the developer's approved materials."
+        },
+        {
+          "id": "term-and-termination",
+          "heading": "Term and Termination",
+          "body": "This Agreement begins on the effective date and continues until the parties agree to end it or the publisher stops commercializing {{product_name}}. Either party may terminate for a material breach that is not cured within thirty days after written notice. If the publisher terminates without cause, the developer's accrued revenue share remains payable. After termination, the publisher may continue to sell existing inventory or fulfill platform obligations for a reasonable wind-down period, and revenue from those sales remains subject to this Agreement."
+        },
+        {
+          "id": "governing-law",
+          "heading": "Governing Law",
+          "body": "This Agreement is governed by the laws of {{governing_law}}, without regard to conflict of law rules. The parties agree to the exclusive jurisdiction of {{venue}} for disputes arising out of or relating to this Agreement."
+        }
+      ]
+    },
+    {
+      "id": "asset-license-agreement",
+      "slug": "asset-license-agreement",
+      "title": "Asset License Agreement",
+      "category": "Licensing",
+      "summary": "Licenses art, music, models, or other assets for use in a game.",
+      "description": "A license template for third-party game assets such as artwork, music, sound effects, 3D models, fonts, and animation. It covers scope, permitted uses, restrictions, fees, term, territory, ownership, credit, and termination.",
+      "jurisdiction": "United States (general; adapt to local law)",
+      "tags": ["asset-license", "art", "music", "3d-models", "content"],
+      "version": "1.0.0",
+      "variables": [
+        {
+          "key": "licensor_name",
+          "label": "Licensor legal name",
+          "type": "string",
+          "required": true,
+          "example": "Aurora Sound Studio LLC",
+          "description": "The party granting the asset license."
+        },
+        {
+          "key": "licensee_name",
+          "label": "Licensee legal name",
+          "type": "string",
+          "required": true,
+          "example": "Pixel Forge Games LLC",
+          "description": "The party receiving the asset license."
+        },
+        {
+          "key": "asset_description",
+          "label": "Asset description",
+          "type": "string",
+          "required": true,
+          "example": "the original soundtrack and 24 sound effects listed in Exhibit A",
+          "description": "Description of the licensed assets."
+        },
+        {
+          "key": "product_name",
+          "label": "Game title",
+          "type": "string",
+          "required": true,
+          "example": "Starfall Tactics",
+          "description": "The game in which the assets may be used."
+        },
+        {
+          "key": "license_fee",
+          "label": "License fee",
+          "type": "string",
+          "required": true,
+          "example": "USD 15,000",
+          "description": "One-time or recurring fee for the license."
+        },
+        {
+          "key": "license_term",
+          "label": "License term",
+          "type": "string",
+          "required": true,
+          "example": "perpetual",
+          "description": "Duration of the license."
+        },
+        {
+          "key": "territory",
+          "label": "Territory",
+          "type": "string",
+          "required": true,
+          "example": "worldwide",
+          "description": "Geographic scope of the license."
+        },
+        {
+          "key": "exclusivity",
+          "label": "Exclusivity",
+          "type": "string",
+          "required": true,
+          "example": "non-exclusive",
+          "description": "Whether the license is exclusive or non-exclusive."
+        },
+        {
+          "key": "permitted_uses",
+          "label": "Permitted uses",
+          "type": "string",
+          "required": true,
+          "example": "incorporating the assets into the game, marketing the game, and distributing the game on all platforms",
+          "description": "Uses of the assets that are permitted under the license."
+        },
+        {
+          "key": "credit_required",
+          "label": "Credit requirement",
+          "type": "string",
+          "required": true,
+          "example": "credit Aurora Sound Studio in the game credits and on the official website",
+          "description": "Attribution requirement, if any."
+        },
+        {
+          "key": "effective_date",
+          "label": "Effective date",
+          "type": "date",
+          "required": true,
+          "example": "2026-01-01",
+          "description": "Date on which the license takes effect."
+        },
+        {
+          "key": "governing_law",
+          "label": "Governing law",
+          "type": "string",
+          "required": true,
+          "example": "the State of Delaware",
+          "description": "Jurisdiction whose laws govern the agreement."
+        },
+        {
+          "key": "venue",
+          "label": "Venue",
+          "type": "string",
+          "required": true,
+          "example": "the state and federal courts located in New Castle County, Delaware",
+          "description": "Courts with exclusive jurisdiction over disputes."
+        }
+      ],
+      "sections": [
+        {
+          "id": "grant",
+          "heading": "License Grant",
+          "body": "This Asset License Agreement, effective {{effective_date}}, is entered into by {{licensor_name}} and {{licensee_name}}. The licensor grants the licensee a {{exclusivity}} license to use {{asset_description}} in connection with {{product_name}}. The license is limited to {{territory}}, lasts for {{license_term}}, and is subject to the terms of this Agreement."
+        },
+        {
+          "id": "permitted-uses",
+          "heading": "Permitted Uses",
+          "body": "The licensee may use the assets for {{permitted_uses}}. The licensee may modify the assets as reasonably necessary to integrate them into the game, provided the modifications do not misrepresent the licensor's original work. The licensee may authorize distributors and platform providers to host and transmit the game containing the assets, but only as necessary to distribute {{product_name}}."
+        },
+        {
+          "id": "restrictions",
+          "heading": "Restrictions",
+          "body": "The licensee may not sell, sublicense, rent, or distribute the assets as standalone assets. The licensee may not use the assets in a way that is defamatory, obscene, or that infringes the rights of a third party. The licensee may not claim authorship of the assets or register them as trademarks or copyrights. The licensee may not use the assets outside {{product_name}} or for a different project unless the licensor agrees in writing."
+        },
+        {
+          "id": "fee",
+          "heading": "License Fee",
+          "body": "The licensee will pay the licensor {{license_fee}} as the license fee. Unless otherwise stated, the fee is due within thirty days after the effective date or as set out in a separate invoice. The license fee is non-refundable except as expressly provided in this Agreement. The licensee is responsible for any taxes arising from the license, excluding taxes based on the licensor's net income."
+        },
+        {
+          "id": "term",
+          "heading": "Term",
+          "body": "The license begins on the effective date and continues for {{license_term}}, unless terminated earlier under this Agreement. If the license is for a limited term, the licensee may continue to distribute existing copies of {{product_name}} after the term only to the extent the licensor agrees in writing."
+        },
+        {
+          "id": "territory",
+          "heading": "Territory",
+          "body": "The license is limited to {{territory}}. The licensee may distribute the game containing the assets in that territory, but may not knowingly authorize distribution outside it. The licensor may grant similar licenses to others in other territories unless the license is exclusive."
+        },
+        {
+          "id": "ownership",
+          "heading": "Ownership",
+          "body": "The licensor retains all right, title, and interest in and to the assets, including all intellectual property rights. The licensee receives only the license expressly granted in this Agreement. The licensee's modifications to the assets remain subject to the licensor's ownership of the underlying assets."
+        },
+        {
+          "id": "credit",
+          "heading": "Credit",
+          "body": "The licensee will provide the following credit: {{credit_required}}. The credit must be reasonably prominent and in a form approved by the licensor. If the game does not have credits, the licensee will provide the credit in the game's documentation or on the official website."
+        },
+        {
+          "id": "warranties",
+          "heading": "Warranties",
+          "body": "The licensor represents and warrants that it owns or has the right to license the assets and that, to its knowledge, the assets do not infringe the intellectual property rights of a third party. The licensee represents and warrants that it has the right to enter into this Agreement and will use the assets in compliance with applicable law. Except as expressly stated, the assets are provided as is without additional warranties."
+        },
+        {
+          "id": "termination",
+          "heading": "Termination",
+          "body": "Either party may terminate this Agreement for a material breach that is not cured within fifteen days after written notice. The licensor may terminate immediately if the licensee uses the assets outside the permitted scope. On termination, the licensee must stop using the assets, remove them from new builds of {{product_name}} where practicable, and confirm in writing that it has done so. Rights to distribute existing copies will be handled as described in the Term section."
+        },
+        {
+          "id": "governing-law",
+          "heading": "Governing Law",
+          "body": "This Agreement is governed by the laws of {{governing_law}}, without regard to conflict of law rules. The parties agree to the exclusive jurisdiction of {{venue}} for disputes arising out of or relating to this Agreement."
+        }
+      ]
+    },
+    {
+      "id": "playtest-agreement",
+      "slug": "playtest-agreement",
+      "title": "Playtest Agreement",
+      "category": "Confidentiality",
+      "summary": "Covers confidentiality, feedback rights, and conduct for game playtests.",
+      "description": "A playtest agreement for closed alpha or beta tests. It protects unreleased game information, grants a feedback license, sets conduct rules, addresses recording and streaming, and clarifies compensation and term.",
+      "jurisdiction": "United States (general; adapt to local law)",
+      "tags": ["playtest", "beta", "alpha", "feedback", "nda"],
+      "version": "1.0.0",
+      "variables": [
+        {
+          "key": "company_name",
+          "label": "Company legal name",
+          "type": "string",
+          "required": true,
+          "example": "Pixel Forge Games LLC",
+          "description": "The entity running the playtest."
+        },
+        {
+          "key": "playtest_name",
+          "label": "Playtest name",
+          "type": "string",
+          "required": true,
+          "example": "Starfall Tactics Closed Alpha",
+          "description": "Name of the playtest program."
+        },
+        {
+          "key": "build_version",
+          "label": "Build version",
+          "type": "string",
+          "required": true,
+          "example": "0.7.3",
+          "description": "Game build covered by the playtest."
+        },
+        {
+          "key": "playtest_start_date",
+          "label": "Playtest start date",
+          "type": "date",
+          "required": true,
+          "example": "2026-02-01",
+          "description": "First day of the playtest."
+        },
+        {
+          "key": "playtest_end_date",
+          "label": "Playtest end date",
+          "type": "date",
+          "required": true,
+          "example": "2026-02-15",
+          "description": "Last day of the playtest."
+        },
+        {
+          "key": "confidentiality_period_years",
+          "label": "Confidentiality period (years)",
+          "type": "number",
+          "required": true,
+          "example": "2",
+          "description": "Number of years the confidentiality obligations last after the playtest."
+        },
+        {
+          "key": "feedback_license_scope",
+          "label": "Feedback license scope",
+          "type": "string",
+          "required": true,
+          "example": "use, reproduce, modify, and commercialize feedback without restriction or compensation",
+          "description": "Scope of the license the participant grants in feedback."
+        },
+        {
+          "key": "compensation",
+          "label": "Compensation",
+          "type": "string",
+          "required": true,
+          "example": "no compensation",
+          "description": "Whether participants receive compensation for the playtest."
+        },
+        {
+          "key": "governing_law",
+          "label": "Governing law",
+          "type": "string",
+          "required": true,
+          "example": "the State of Delaware",
+          "description": "Jurisdiction whose laws govern the agreement."
+        },
+        {
+          "key": "venue",
+          "label": "Venue",
+          "type": "string",
+          "required": true,
+          "example": "the state and federal courts located in New Castle County, Delaware",
+          "description": "Courts with exclusive jurisdiction over disputes."
+        },
+        {
+          "key": "contact_email",
+          "label": "Playtest contact email",
+          "type": "email",
+          "required": true,
+          "example": "playtest@pixelforge.example",
+          "description": "Email address for playtest questions and reports."
+        }
+      ],
+      "sections": [
+        {
+          "id": "participation",
+          "heading": "Participation",
+          "body": "You are participating in {{playtest_name}}, build {{build_version}}, operated by {{company_name}}. The playtest runs from {{playtest_start_date}} to {{playtest_end_date}}, unless {{company_name}} changes the dates or ends the playtest early. Participation is by invitation and is personal to you. You may not share access, download links, keys, or account credentials with anyone else. You must follow all instructions provided by {{company_name}}."
+        },
+        {
+          "id": "confidentiality",
+          "heading": "Confidentiality",
+          "body": "The playtest and all related information are confidential. You may not disclose, publish, stream, record, screenshot, or share gameplay, builds, features, story details, art, audio, or other non-public information about the playtest without {{company_name}} prior written consent. You may discuss the playtest only in designated private channels and only with other approved participants. These obligations continue for {{confidentiality_period_years}} years after the playtest ends and do not apply to information that becomes public through no fault of yours."
+        },
+        {
+          "id": "feedback-license",
+          "heading": "Feedback License",
+          "body": "You may provide suggestions, bug reports, balance feedback, and other input about the playtest. You grant {{company_name}} a perpetual, worldwide, royalty-free, irrevocable license to {{feedback_license_scope}}. You waive any right to compensation, attribution, or approval for use of your feedback. {{company_name}} is not obligated to use any feedback."
+        },
+        {
+          "id": "restrictions",
+          "heading": "Playtest Restrictions",
+          "body": "You may not reverse engineer, decompile, or modify the playtest build; use cheats, bots, or unauthorized tools; attempt to access other participants' accounts or data; exploit bugs for personal gain; or use the playtest for commercial purposes. You may not harass other participants or {{company_name}} staff. You must report security vulnerabilities promptly to {{contact_email}} and must not publicly disclose them before {{company_name}} authorizes disclosure."
+        },
+        {
+          "id": "recording",
+          "heading": "Recording and Monitoring",
+          "body": "{{company_name}} may collect gameplay data, logs, crash reports, and communications for testing, security, and improvement purposes. {{company_name}} may record sessions where permitted by law and with any required notice or consent. Any recording or streaming by you requires prior written permission, except as expressly allowed in the playtest instructions."
+        },
+        {
+          "id": "compensation",
+          "heading": "Compensation",
+          "body": "You will receive the following compensation for participating: {{compensation}}. Unless expressly stated, participation is voluntary and does not create an employment, contractor, or agency relationship. You are responsible for any taxes arising from compensation."
+        },
+        {
+          "id": "term",
+          "heading": "Term and Termination",
+          "body": "This Agreement begins when you accept it and continues until the playtest ends, unless terminated earlier. {{company_name}} may suspend or terminate your participation at any time, including for a violation of this Agreement. On termination, you must stop using the playtest build and delete all copies in your possession. The confidentiality, feedback license, and other provisions that by their nature should survive will survive termination."
+        },
+        {
+          "id": "governing-law",
+          "heading": "Governing Law",
+          "body": "This Agreement is governed by the laws of {{governing_law}}, without regard to conflict of law rules. The parties agree to the exclusive jurisdiction of {{venue}} for disputes arising out of or relating to this Agreement, except where applicable law provides otherwise."
+        },
+        {
+          "id": "contact",
+          "heading": "Contact",
+          "body": "Questions about the playtest may be sent to {{contact_email}}."
+        }
+      ]
+    },
+    {
+      "id": "dmca-policy",
+      "slug": "dmca-takedown-policy",
+      "title": "DMCA Takedown Policy",
+      "category": "Compliance",
+      "summary": "Explains how to report copyright infringement and submit counter-notices.",
+      "description": "A DMCA policy template for a game website, community platform, or user-generated content service. It covers takedown notices, counter-notifications, repeat infringers, and misrepresentation consequences. Review the DMCA safe harbor requirements before use.",
+      "jurisdiction": "United States (DMCA); adapt for other countries",
+      "tags": ["dmca", "copyright", "takedown", "ugc", "compliance"],
+      "version": "1.0.0",
+      "variables": [
+        {
+          "key": "company_name",
+          "label": "Company legal name",
+          "type": "string",
+          "required": true,
+          "example": "Pixel Forge Games LLC",
+          "description": "The entity operating the service."
+        },
+        {
+          "key": "website_url",
+          "label": "Service website",
+          "type": "url",
+          "required": true,
+          "example": "https://pixelforge.example",
+          "description": "Website where the policy is posted."
+        },
+        {
+          "key": "dmca_email",
+          "label": "DMCA email",
+          "type": "email",
+          "required": true,
+          "example": "dmca@pixelforge.example",
+          "description": "Email address for copyright notices."
+        },
+        {
+          "key": "designated_agent_name",
+          "label": "Designated agent name",
+          "type": "string",
+          "required": true,
+          "example": "Copyright Agent, Pixel Forge Games LLC",
+          "description": "Name of the designated copyright agent."
+        },
+        {
+          "key": "designated_agent_address",
+          "label": "Designated agent address",
+          "type": "string",
+          "required": true,
+          "example": "123 Studio Way, Wilmington, DE 19801",
+          "description": "Postal address for the designated copyright agent."
+        },
+        {
+          "key": "repeat_infringer_policy",
+          "label": "Repeat infringer policy",
+          "type": "string",
+          "required": true,
+          "example": "terminate accounts that receive three valid infringement notices within twelve months",
+          "description": "How the service handles repeat infringers."
+        },
+        {
+          "key": "counter_notice_address",
+          "label": "Counter-notice address",
+          "type": "string",
+          "required": true,
+          "example": "Copyright Agent, Pixel Forge Games LLC, 123 Studio Way, Wilmington, DE 19801",
+          "description": "Address where counter-notices should be sent."
+        },
+        {
+          "key": "governing_law",
+          "label": "Governing law",
+          "type": "string",
+          "required": true,
+          "example": "the State of Delaware",
+          "description": "Jurisdiction whose laws govern the policy."
+        }
+      ],
+      "sections": [
+        {
+          "id": "policy",
+          "heading": "Copyright Policy",
+          "body": "{{company_name}} respects the intellectual property rights of others and expects users of {{website_url}} to do the same. This policy explains how to report alleged copyright infringement and how to respond if your content is removed. {{company_name}} will respond to notices that comply with the Digital Millennium Copyright Act (DMCA) and applicable law. This policy is governed by the laws of {{governing_law}}."
+        },
+        {
+          "id": "reporting-infringement",
+          "heading": "Reporting Copyright Infringement",
+          "body": "To report alleged infringement, send a written notice to the designated agent at {{designated_agent_name}}, {{designated_agent_address}}, or {{dmca_email}}. The notice must include: a physical or electronic signature of the copyright owner or authorized agent; identification of the copyrighted work claimed to be infringed; identification of the material claimed to be infringing, including enough information to locate it; your name, address, telephone number, and email address; a statement that you have a good faith belief that the use is not authorized; a statement that the information in the notice is accurate; and a statement, under penalty of perjury, that you are authorized to act on behalf of the copyright owner."
+        },
+        {
+          "id": "counter-notification",
+          "heading": "Counter-Notification",
+          "body": "If your content was removed and you believe the removal was the result of a mistake or misidentification, you may send a counter-notification to {{counter_notice_address}}. The counter-notification must include: your physical or electronic signature; identification of the removed material and its location before removal; a statement under penalty of perjury that you have a good faith belief the material was removed by mistake or misidentification; your name, address, and telephone number; and a statement that you consent to the jurisdiction of the federal district court for the district where your address is located, or if your address is outside the United States, a judicial district where {{company_name}} may be found, and that you will accept service of process from the person who submitted the original notice or that person's agent."
+        },
+        {
+          "id": "repeat-infringers",
+          "heading": "Repeat Infringers",
+          "body": "{{company_name}} will {{repeat_infringer_policy}}. {{company_name}} may also remove content, suspend access, or take other appropriate action in response to infringement notices, regardless of whether an account has reached the repeat infringer threshold. {{company_name}} maintains records of infringement notices and actions taken."
+        },
+        {
+          "id": "misrepresentations",
+          "heading": "Misrepresentations",
+          "body": "Knowingly submitting a false or misleading infringement notice or counter-notification may result in liability for damages, including costs and attorneys' fees, under the DMCA or other applicable law. {{company_name}} may reject notices that do not substantially comply with the requirements of this policy or applicable law. This policy does not limit any other rights or remedies available to {{company_name}}."
+        },
+        {
+          "id": "contact",
+          "heading": "Contact",
+          "body": "For questions about this policy, contact {{designated_agent_name}} at {{dmca_email}} or write to {{designated_agent_address}}."
+        }
+      ]
+    },
+    {
+      "id": "content-creator-policy",
+      "slug": "content-creator-policy",
+      "title": "Content Creator and Streaming Policy",
+      "category": "Community",
+      "summary": "Allows creators to make and monetize videos and streams featuring a game.",
+      "description": "A permissive content creator policy for streamers, video creators, and community creators. It grants a limited license to create and monetize gameplay content, sets restrictions and spoiler rules, and explains copyright and takedown processes.",
+      "jurisdiction": "United States (general; adapt to local law and platform rules)",
+      "tags": ["streaming", "creators", "youtube", "twitch", "community"],
+      "version": "1.0.0",
+      "variables": [
+        {
+          "key": "company_name",
+          "label": "Company legal name",
+          "type": "string",
+          "required": true,
+          "example": "Pixel Forge Games LLC",
+          "description": "The entity that owns the game and grants the policy."
+        },
+        {
+          "key": "product_name",
+          "label": "Game title",
+          "type": "string",
+          "required": true,
+          "example": "Starfall Tactics",
+          "description": "The game covered by the policy."
+        },
+        {
+          "key": "website_url",
+          "label": "Company website",
+          "type": "url",
+          "required": true,
+          "example": "https://pixelforge.example",
+          "description": "Website where the current policy is posted."
+        },
+        {
+          "key": "contact_email",
+          "label": "Creator support email",
+          "type": "email",
+          "required": true,
+          "example": "creators@pixelforge.example",
+          "description": "Email address for creator questions and permissions."
+        },
+        {
+          "key": "monetization_rules",
+          "label": "Monetization rules",
+          "type": "string",
+          "required": true,
+          "example": "You may monetize videos and streams through platform ads, subscriptions, and donations, but not by selling the game or its assets",
+          "description": "How creators may monetize content featuring the game."
+        },
+        {
+          "key": "content_restrictions",
+          "label": "Content restrictions",
+          "type": "string",
+          "required": true,
+          "example": "do not use the game to promote hate, harassment, gambling, or illegal activity, and do not imply that your content is official",
+          "description": "Restrictions on creator content."
+        },
+        {
+          "key": "spoiler_restrictions",
+          "label": "Spoiler restrictions",
+          "type": "string",
+          "required": true,
+          "example": "clearly label story spoilers and avoid revealing major late-game twists in thumbnails or titles",
+          "description": "Rules for spoiler content."
+        },
+        {
+          "key": "takedown_contact",
+          "label": "Takedown contact",
+          "type": "string",
+          "required": true,
+          "example": "creators@pixelforge.example",
+          "description": "Contact for copyright or policy concerns."
+        },
+        {
+          "key": "effective_date",
+          "label": "Effective date",
+          "type": "date",
+          "required": true,
+          "example": "2026-01-01",
+          "description": "Date on which the policy takes effect."
+        }
+      ],
+      "sections": [
+        {
+          "id": "license-to-create",
+          "heading": "Permission to Create Content",
+          "body": "{{company_name}} grants individual creators a limited, non-exclusive, revocable, royalty-free license to capture, stream, upload, and share gameplay footage, screenshots, and commentary featuring {{product_name}}, effective {{effective_date}}. This permission applies to content created by you for your own channel and not to content that is primarily a copy of the game or its assets. This license does not transfer ownership of the game or grant rights to our trademarks beyond reasonable, nominative references."
+        },
+        {
+          "id": "monetization",
+          "heading": "Monetization",
+          "body": "{{monetization_rules}}. Monetization must comply with applicable law and the rules of the platform where your content appears. {{company_name}} does not claim any share of your advertising, subscription, or donation revenue under this policy. You may not sell, license, or distribute the game itself, its soundtrack, art files, or other assets as standalone products."
+        },
+        {
+          "id": "restrictions",
+          "heading": "Content Restrictions",
+          "body": "When creating content featuring {{product_name}}, you must {{content_restrictions}}. You may not use the game or its assets to mislead viewers, infringe the rights of others, or violate platform rules. You may not use {{company_name}} logos, characters, or trademarks in a way that suggests sponsorship or endorsement without written permission."
+        },
+        {
+          "id": "spoilers",
+          "heading": "Spoilers",
+          "body": "Please {{spoiler_restrictions}}. We may ask creators to adjust thumbnails, titles, or descriptions that reveal major story content during a launch window. Reasonable requests will be made through the contact below."
+        },
+        {
+          "id": "copyright-strikes",
+          "heading": "Copyright and Takedowns",
+          "body": "If {{company_name}} believes content violates this policy or infringes intellectual property rights, we may request that the content be removed or that the creator correct the issue. We may also submit a platform takedown request where appropriate. If you believe a takedown was made in error, contact {{takedown_contact}} with the relevant details so we can review the matter. Repeated or serious violations may result in a creator being excluded from future permissions."
+        },
+        {
+          "id": "no-endorsement",
+          "heading": "No Endorsement",
+          "body": "Your content is your own. {{company_name}} does not endorse, sponsor, or approve creator content unless we expressly say so in writing. You are responsible for your content, including compliance with advertising disclosure rules, platform terms, and applicable law."
+        },
+        {
+          "id": "changes",
+          "heading": "Changes to This Policy",
+          "body": "{{company_name}} may update this policy from time to time. The current version will be posted at {{website_url}}. Changes apply to content created after the updated policy takes effect. Material changes will be announced through the website or other reasonable means."
+        },
+        {
+          "id": "contact",
+          "heading": "Contact",
+          "body": "For creator questions or permission requests, contact {{contact_email}}."
+        }
+      ]
+    },
+    {
+      "id": "sweepstakes-official-rules",
+      "slug": "sweepstakes-official-rules",
+      "title": "Sweepstakes Official Rules",
+      "category": "Promotions",
+      "summary": "Provides official rules for a game-related sweepstakes or giveaway.",
+      "description": "An official rules template for a game promotion that is structured as a sweepstakes rather than a lottery. It covers eligibility, entry, prizes, odds, winner selection, claiming, privacy, and limitations. Review local promotion and registration requirements before launch.",
+      "jurisdiction": "United States (general; state and local rules may require changes or registration)",
+      "tags": ["sweepstakes", "giveaway", "promotion", "marketing", "compliance"],
+      "version": "1.0.0",
+      "variables": [
+        {
+          "key": "sponsor_name",
+          "label": "Sponsor legal name",
+          "type": "string",
+          "required": true,
+          "example": "Pixel Forge Games LLC",
+          "description": "The entity sponsoring the sweepstakes."
+        },
+        {
+          "key": "sponsor_address",
+          "label": "Sponsor address",
+          "type": "string",
+          "required": true,
+          "example": "123 Studio Way, Wilmington, DE 19801",
+          "description": "Postal address of the sponsor."
+        },
+        {
+          "key": "sweepstakes_name",
+          "label": "Sweepstakes name",
+          "type": "string",
+          "required": true,
+          "example": "Starfall Tactics Launch Giveaway",
+          "description": "Official name of the promotion."
+        },
+        {
+          "key": "start_date",
+          "label": "Start date",
+          "type": "date",
+          "required": true,
+          "example": "2026-03-01",
+          "description": "First day of the entry period."
+        },
+        {
+          "key": "end_date",
+          "label": "End date",
+          "type": "date",
+          "required": true,
+          "example": "2026-03-31",
+          "description": "Last day of the entry period."
+        },
+        {
+          "key": "eligibility_age",
+          "label": "Minimum age",
+          "type": "number",
+          "required": true,
+          "example": "18",
+          "description": "Minimum age for entry."
+        },
+        {
+          "key": "eligibility_region",
+          "label": "Eligibility region",
+          "type": "string",
+          "required": true,
+          "example": "the fifty United States and the District of Columbia, excluding residents of New York and Florida",
+          "description": "Geographic eligibility for the sweepstakes."
+        },
+        {
+          "key": "prize_description",
+          "label": "Prize description",
+          "type": "string",
+          "required": true,
+          "example": "one digital deluxe edition of Starfall Tactics and a branded gaming headset",
+          "description": "Description of the prize or prizes."
+        },
+        {
+          "key": "prize_approximate_value",
+          "label": "Prize approximate retail value",
+          "type": "string",
+          "required": true,
+          "example": "USD 250",
+          "description": "Approximate retail value of the prize."
+        },
+        {
+          "key": "odds_statement",
+          "label": "Odds statement",
+          "type": "string",
+          "required": true,
+          "example": "Odds of winning depend on the number of eligible entries received",
+          "description": "Statement of odds or how odds are determined."
+        },
+        {
+          "key": "winner_notification_days",
+          "label": "Winner notification period (days)",
+          "type": "number",
+          "required": true,
+          "example": "7",
+          "description": "Number of days after the entry period within which winners are notified."
+        },
+        {
+          "key": "claim_period_days",
+          "label": "Prize claim period (days)",
+          "type": "number",
+          "required": true,
+          "example": "10",
+          "description": "Number of days a winner has to claim the prize."
+        },
+        {
+          "key": "governing_law",
+          "label": "Governing law",
+          "type": "string",
+          "required": true,
+          "example": "the State of Delaware",
+          "description": "Jurisdiction whose laws govern the sweepstakes."
+        },
+        {
+          "key": "privacy_policy_url",
+          "label": "Privacy policy URL",
+          "type": "url",
+          "required": true,
+          "example": "https://pixelforge.example/privacy",
+          "description": "URL for the sponsor's privacy policy."
+        }
+      ],
+      "sections": [
+        {
+          "id": "eligibility",
+          "heading": "Eligibility",
+          "body": "The {{sweepstakes_name}} is open only to legal residents of {{eligibility_region}} who are at least {{eligibility_age}} years old at the time of entry. Employees, officers, directors, agents, and immediate family members of {{sponsor_name}} and its promotion partners are not eligible. Void outside the eligible region and where prohibited by law. By entering, participants agree to these Official Rules and the decisions of {{sponsor_name}}, which are final and binding."
+        },
+        {
+          "id": "entry-period",
+          "heading": "Entry Period",
+          "body": "The sweepstakes begins at 12:00 a.m. Eastern Time on {{start_date}} and ends at 11:59 p.m. Eastern Time on {{end_date}}. Entries received outside the entry period are void. {{sponsor_name}} clock is the official timekeeping device for the sweepstakes."
+        },
+        {
+          "id": "how-to-enter",
+          "heading": "How to Enter",
+          "body": "To enter, follow the entry instructions posted with the sweepstakes during the entry period. No purchase is necessary, and a purchase will not improve your chances of winning. Limit one entry per person and per email address unless the entry instructions state otherwise. Entries that are incomplete, fraudulent, automated, or generated by script are void. {{sponsor_name}} is not responsible for entries that are lost, late, misdirected, or not received for any reason."
+        },
+        {
+          "id": "prizes",
+          "heading": "Prizes",
+          "body": "The prize is {{prize_description}}, with an approximate retail value of {{prize_approximate_value}}. The prize is awarded as is, and {{sponsor_name}} will not replace it except at its discretion. The prize is non-transferable and may not be exchanged for cash. The winner is responsible for all taxes and any costs not expressly included. If a prize cannot be awarded as described, {{sponsor_name}} may substitute a prize of equal or greater value."
+        },
+        {
+          "id": "odds",
+          "heading": "Odds",
+          "body": "{{odds_statement}}. Many will enter, and only the number of prizes stated will be awarded."
+        },
+        {
+          "id": "winner-selection",
+          "heading": "Winner Selection and Notification",
+          "body": "Winners will be selected in a random drawing from all eligible entries within {{winner_notification_days}} days after the entry period ends. {{sponsor_name}} will notify potential winners using the contact information provided at entry. A potential winner may be required to sign an eligibility and liability release and, where lawful, a publicity release. If a potential winner cannot be reached, does not respond within the claim period, or is found ineligible, an alternate winner may be selected."
+        },
+        {
+          "id": "claiming-prize",
+          "heading": "Claiming the Prize",
+          "body": "A potential winner must respond and provide any required information within {{claim_period_days}} days after notification. Failure to comply may result in forfeiture of the prize. The prize will be delivered within a reasonable time after verification. {{sponsor_name}} is not responsible for delays caused by the winner or by third-party delivery services."
+        },
+        {
+          "id": "privacy",
+          "heading": "Privacy",
+          "body": "Information collected for the sweepstakes will be used to administer the promotion, verify eligibility, communicate with entrants, and comply with law. Personal information will be handled in accordance with the privacy policy at {{privacy_policy_url}}. By entering, participants consent to the use of their information for these purposes. Where required, winners may be asked to consent to the use of their name, likeness, and location for promotional purposes without additional compensation."
+        },
+        {
+          "id": "limitations",
+          "heading": "Limitations of Liability",
+          "body": "To the maximum extent permitted by law, {{sponsor_name}} and its promotion partners are not responsible for technical failures, unauthorized intervention, human error, lost or corrupted entries, or any injury, loss, or damage arising from participation or from acceptance, use, or misuse of a prize. {{sponsor_name}} reserves the right to cancel, suspend, or modify the sweepstakes if fraud, technical failure, or any other factor impairs its integrity. Any attempt to tamper with the promotion may result in disqualification and may be referred to law enforcement."
+        },
+        {
+          "id": "governing-law",
+          "heading": "Governing Law",
+          "body": "The sweepstakes and these Official Rules are governed by the laws of {{governing_law}}, without regard to conflict of law rules. By entering, participants agree to the exclusive jurisdiction of the courts located in that jurisdiction for any dispute arising out of or relating to the sweepstakes, except where applicable law provides otherwise. Sponsor: {{sponsor_name}}, {{sponsor_address}}."
+        }
+      ]
+    },
+    {
+      "id": "work-for-hire-agreement",
+      "slug": "work-for-hire-agreement",
+      "title": "Work-for-Hire Agreement",
+      "category": "Contracting",
+      "summary": "Assigns ownership of commissioned game content to the hiring company.",
+      "description": "A work-for-hire template for commissioned game art, music, writing, code, or other deliverables. It covers deliverables, payment, work-made-for-hire status, moral rights, confidentiality, warranties, and termination.",
+      "jurisdiction": "United States (general; adapt to local copyright and employment law)",
+      "tags": ["work-for-hire", "commission", "copyright", "deliverables", "contractor"],
+      "version": "1.0.0",
+      "variables": [
+        {
+          "key": "company_name",
+          "label": "Company legal name",
+          "type": "string",
+          "required": true,
+          "example": "Pixel Forge Games LLC",
+          "description": "The party commissioning and owning the work."
+        },
+        {
+          "key": "contractor_name",
+          "label": "Contractor legal name",
+          "type": "string",
+          "required": true,
+          "example": "Jordan Lee",
+          "description": "The party creating the commissioned work."
+        },
+        {
+          "key": "project_description",
+          "label": "Project description",
+          "type": "string",
+          "required": true,
+          "example": "commissioned character portraits for Starfall Tactics",
+          "description": "Short description of the commissioned project."
+        },
+        {
+          "key": "deliverables",
+          "label": "Deliverables",
+          "type": "string",
+          "required": true,
+          "example": "twelve high-resolution character portraits in layered source files",
+          "description": "Specific deliverables the contractor will provide."
+        },
+        {
+          "key": "payment_amount",
+          "label": "Payment amount",
+          "type": "string",
+          "required": true,
+          "example": "USD 6,000",
+          "description": "Total payment for the deliverables."
+        },
+        {
+          "key": "payment_schedule",
+          "label": "Payment schedule",
+          "type": "string",
+          "required": true,
+          "example": "50 percent on signing and 50 percent on final delivery",
+          "description": "When payments are due."
+        },
+        {
+          "key": "effective_date",
+          "label": "Effective date",
+          "type": "date",
+          "required": true,
+          "example": "2026-01-01",
+          "description": "Date on which the agreement takes effect."
+        },
+        {
+          "key": "termination_notice_days",
+          "label": "Termination notice (days)",
+          "type": "number",
+          "required": true,
+          "example": "14",
+          "description": "Notice period required to terminate for convenience."
+        },
+        {
+          "key": "governing_law",
+          "label": "Governing law",
+          "type": "string",
+          "required": true,
+          "example": "the State of Delaware",
+          "description": "Jurisdiction whose laws govern the agreement."
+        },
+        {
+          "key": "venue",
+          "label": "Venue",
+          "type": "string",
+          "required": true,
+          "example": "the state and federal courts located in New Castle County, Delaware",
+          "description": "Courts with exclusive jurisdiction over disputes."
+        },
+        {
+          "key": "moral_rights_waiver",
+          "label": "Moral rights waiver",
+          "type": "string",
+          "required": true,
+          "example": "waives any moral rights or rights of attribution and integrity in the deliverables",
+          "description": "Description of the moral rights waiver, where permitted by law."
+        }
+      ],
+      "sections": [
+        {
+          "id": "services",
+          "heading": "Commissioned Services",
+          "body": "{{company_name}} commissions {{contractor_name}} to create the work described below for {{project_description}}. This Agreement takes effect on {{effective_date}}. The contractor will perform the work with reasonable skill and care, follow the project brief, and provide progress updates on request."
+        },
+        {
+          "id": "deliverables",
+          "heading": "Deliverables",
+          "body": "The contractor will deliver {{deliverables}} in the formats and at the specifications reasonably requested by {{company_name}}. The contractor will deliver all source files and materials needed for {{company_name}} to use, modify, and maintain the work. {{company_name}} may review the deliverables and request reasonable revisions before final acceptance. Deliverables are accepted when {{company_name}} confirms acceptance in writing or uses them commercially."
+        },
+        {
+          "id": "payment",
+          "heading": "Payment",
+          "body": "{{company_name}} will pay the contractor {{payment_amount}} according to the following schedule: {{payment_schedule}}. The contractor will submit invoices with reasonable supporting detail. {{company_name}} will pay undisputed invoices within thirty days after receipt. The contractor is responsible for all taxes arising from the payment."
+        },
+        {
+          "id": "work-made-for-hire",
+          "heading": "Work Made for Hire",
+          "body": "All deliverables and work product created by the contractor under this Agreement are works made for hire for {{company_name}} to the maximum extent permitted by law. If any work is not a work made for hire, the contractor assigns to {{company_name}} all right, title, and interest in and to the work, including all copyrights and other intellectual property rights, effective on creation. The contractor will execute any documents reasonably requested to confirm or perfect this assignment."
+        },
+        {
+          "id": "moral-rights",
+          "heading": "Moral Rights",
+          "body": "To the extent permitted by law, the contractor {{moral_rights_waiver}}. If moral rights cannot be waived, the contractor agrees not to assert them in a way that interferes with {{company_name}} use, modification, or commercialization of the deliverables. The contractor will obtain similar waivers from any approved subcontractors."
+        },
+        {
+          "id": "confidentiality",
+          "heading": "Confidentiality",
+          "body": "The contractor will keep confidential all non-public information received from {{company_name}}, including game designs, source code, builds, business plans, player data, and financial information. The contractor will use this information only to perform the work and will return or destroy it when the engagement ends or on request. These obligations do not apply to information that is publicly available through no fault of the contractor or that the contractor is required to disclose by law, provided the contractor gives {{company_name}} prompt notice where permitted."
+        },
+        {
+          "id": "warranties",
+          "heading": "Representations and Warranties",
+          "body": "The contractor represents and warrants that it has the right and authority to enter into this Agreement, that the deliverables will be original or properly licensed, that the deliverables will not infringe the rights of any third party, and that the contractor will comply with applicable laws. The contractor will not incorporate third-party materials into the deliverables without {{company_name}} prior written approval and any required licenses."
+        },
+        {
+          "id": "term-and-termination",
+          "heading": "Term and Termination",
+          "body": "This Agreement begins on the effective date and continues until the deliverables are accepted or the Agreement is terminated. Either party may terminate for convenience with {{termination_notice_days}} days' written notice. Either party may terminate immediately for a material breach that is not cured within ten days after written notice. On termination, {{company_name}} will pay for work properly performed and accepted before the effective date of termination, and the contractor will deliver all work in progress. The intellectual property and confidentiality provisions survive termination."
+        },
+        {
+          "id": "governing-law",
+          "heading": "Governing Law",
+          "body": "This Agreement is governed by the laws of {{governing_law}}, without regard to conflict of law rules. The parties agree to the exclusive jurisdiction of {{venue}} for disputes arising out of or relating to this Agreement."
+        }
+      ]
+    }
+  ]
+}
